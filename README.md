@@ -1,70 +1,63 @@
-# Getting Started with Create React App
+# 🌍 GlobularInfo
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+GlobularInfo is a MERN-stack web app designed to enrich your travel experience the moment you land somewhere new. With real-time geolocation, cultural insights, and quirky extras like a location-themed Pokémon, GlobularInfo becomes your intelligent, personalized itinerary planner.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## 🚀 Features
 
-### `npm start`
+### 📍 Location-Based Intelligence
+- Automatically detects your current location using browser geolocation.
+- Converts latitude/longitude into readable location data (state, country, city) via **API Ninjas Reverse Geocoding API**.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### 🏛️ Historical & Cultural Insight
+- Fetches historically relevant facts about your state with **API Ninjas Historical Events API**.
+- Offers culturally appropriate food recommendations and lesser-known destinations.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### 🌐 Global Visualization
+- Your current location is rendered interactively on a globe using **Three.js**.
 
-### `npm test`
+### 🧠 AI-Powered Planning
+- Uses **Google Gemini API** to generate a smart itinerary enriched with regional facts, sightseeing ideas, and local customs.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### 🌍 Language Localization
+- Automatically translates three essential phrases into the local language:
+  - “Hello”
+  - “Thank you”
+  - “Nice”
 
-### `npm run build`
+### 🐾 Pokémon Companion
+- Assigns a region-themed Pokémon (via **PokéAPI**) to your journey.
+  - Example: Visiting **Assam**? Meet your travel buddy **Rhyhorn**, inspired by the region’s famous one-horned rhino.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+---
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 🔧 Tech Stack
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- **Frontend**: React
+- **Backend**: Node.js, Express
+- **Database**: MongoDB
+- **Visualization**: Three.js
+- **APIs**:
+  - [PokéAPI](https://pokeapi.co/)
+  - [API Ninjas - Historical Events](https://api-ninjas.com/api/historicalevents)
+  - [API Ninjas - Reverse Geocoding](https://api-ninjas.com/api/reversegeocoding)
+  - [Google Gemini API](https://developers.google.com/)
 
-### `npm run eject`
+---
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## 💡 How It Works
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+1. On page load, user's location is captured via `navigator.geolocation`.
+2. Reverse geocoding translates coordinates into regional info.
+3. API calls fetch historical data, location facts, and itinerary suggestions.
+4. Translations and Pokémon assignment make the experience fun and localized.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+---
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## 🔐 Environment Variables
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+```env
+API_NINJAS_KEY=your_api_ninjas_key
+GOOGLE_GEMINI_KEY=your_gemini_api_key
+MONGO_URI=your_mongodb_connection_string
