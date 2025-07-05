@@ -1,5 +1,7 @@
 # 🌍 GlobularInfo
 
+Currently in Round 1 i have implemented a frontend look up and please do allow the location
+
 GlobularInfo is a MERN-stack web app designed to enrich your travel experience the moment you land somewhere new. With real-time geolocation, cultural insights, and quirky extras like a location-themed Pokémon, GlobularInfo becomes your intelligent, personalized itinerary planner.
 
 ---
