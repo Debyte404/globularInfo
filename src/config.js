@@ -1,1 +1,1 @@
-export var backendAPI = "http://localhost:5000/api"
+export var backendAPI = "https://globularinfobackend.onrender.com/api"
