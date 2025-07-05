@@ -1,0 +1,90 @@
+<!doctype html>
+<html>
+    <head>
+        <title>404 - are you lost?</title>
+
+        <!-- <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}"> -->
+        <link rel="stylesheet" href='./button.css'>
+        <!-- <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}" type="image/x-icon"> -->
+
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Code Rain Background</title>
+        <style>
+            body {
+                margin: 0;
+                padding: 0;
+                overflow: hidden; /* Hide scrollbars */
+                background-color: #121319; /* Set background color */
+            }
+
+            /* Create the raindrop animation */
+            @keyframes rain {
+                0% {
+                    transform: translateY(-100%);
+                    opacity: 0;
+                }
+                100% {
+                    transform: translateY(100vh);
+                    opacity: 1;
+                }
+            }
+
+            /* Style the raindrops */
+            .raindrop {
+                position: absolute;
+                width: 2px;
+                height: 10px;
+                background-color: #0f0; /* Blue color for raindrops */
+                animation: rain 1s linear infinite; /* Apply the rain animation */
+                z-index: 1;
+            }
+
+            #icon {
+                position: absolute;
+                top: 10px; /* Adjust the top position as needed */
+                left: 10px; /* Adjust the left position as needed */
+                z-index: 2; /* Make the icon appear on top of the raindrops */
+                width: 50px; /* Adjust the width as needed */
+                height: 50px; /* Adjust the height as needed */
+            }
+
+            #Welcome {
+                display: flex;
+                justify-content: center; /* Horizontally center */
+                align-items: center; /* Vertically center */
+                height: 70vh; /* Set the container height to viewport height */
+                z-index: 2; /* Make the container appear on top of the raindrops */
+            }
+        </style>
+
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    </head>
+    <body>
+        
+        <h1 id="Welcome" style="font-family: monospace; font-size:50px ;color: white; user-select: none; -webkit-user-select: none; -ms-user-select: none;"> <> 404 - are you lost? <></h1>
+        <a href="/"><button id="toTV" class="button-30" style="top:52%;left:45%;position: absolute;z-index:2;" role="button">Go To Home</button></a>
+        <script>
+            
+            // document.getElementById("toTV").onclick = function () {
+            //     $('body').fadeOut(500, function() {
+            //     // window.location.href = "/";
+            //     window.location.replace("/");
+
+            //     });
+            //     // location.href = "/tv";
+            // };
+            // Add raindrops dynamically (you can adjust the quantity)
+            const numRaindrops = 250;
+            for (let i = 0; i < numRaindrops; i++) {
+                const raindrop = document.createElement('div');
+                raindrop.className = 'raindrop';
+                raindrop.style.left = `${Math.random() * 100}%`;
+                raindrop.style.top = "10px"; // Start raindrops from the top
+                raindrop.style.animationDuration = `${Math.random() * 2 + 1}s`; // Vary animation speed
+                document.body.appendChild(raindrop);
+            }
+        </script>
+    </body>
+</html>

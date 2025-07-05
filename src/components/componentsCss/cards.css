@@ -52,3 +52,16 @@ font-family: 'Hack', monospace;
   border-radius: 8px;
   margin-bottom: 1rem;
 }
+
+.card-icon {
+    width: 100%;
+    height: auto;
+    background-color: rgb(0, 6, 25);
+    border-radius: 12px;
+    padding: 8px;
+    margin-top: 16px;
+    font-size: 40px;
+    text-align: center;
+    /* vertical-align: middle; */
+    color: rgb(85, 255, 0);
+}

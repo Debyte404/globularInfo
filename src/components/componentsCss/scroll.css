@@ -5,7 +5,8 @@
 }
 
 ::-webkit-scrollbar-track {
-  background: transparent;
+  /* background: transparent; */
+  background-color: rgb(85, 255, 0);
 }
 
 ::-webkit-scrollbar-thumb {
@@ -20,7 +21,7 @@
 /* Firefox-specific scrollbar styling */
 body {
   scrollbar-width: thin;
-  scrollbar-color: black transparent;
+  scrollbar-color: black rgb(85, 255, 0);
 }
 
 /* Optional: target specific scroll containers */
@@ -41,7 +42,7 @@ body {
 .scroll-down {
     /* position: fixed; */
     position: absolute;
-    top:2%;
+    top:10%;
     right: 0%;
     width: 150px;
     height: 150px;
@@ -51,6 +52,16 @@ body {
     align-items: center;
     justify-content: center;
     z-index: 1000;
+}
+
+@media screen and (max-width: 900px) {
+    .scroll-down {
+        position: absolute;
+        top: 15%;
+        right: -1%;
+        width: 150px;
+        height: 150px;
+    }
 }
 
 .scroll-img {

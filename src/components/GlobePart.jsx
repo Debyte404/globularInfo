@@ -15,7 +15,7 @@ export default function GlobeWithLocation() {
   const locationRef = useRef(null);
   const intervalRef = useRef(null);
 
-  const { setLongitude, setLatitude, setState, setCountry } = React.useContext(UserContext);
+  const { setLongitude, setLatitude } = React.useContext(UserContext);
 
   const centerGlobeOnLocation = (lat, lng, tries = 0) => {
     if (
