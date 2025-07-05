@@ -241,7 +241,7 @@ export default function HomePage() {
               >
                 {loading ? <Loader /> : null}
                 <p className="section-text">
-                  Click the button below to generate a unique travel itinerary
+                  Click the button below or say "generate" to generate a unique travel itinerary
                   based on your location.
                 </p>
                 <button id="generate-btn" className="section-buton" onClick={handleClick}>
@@ -321,7 +321,7 @@ export default function HomePage() {
               >
                 {loading2 ? <Loader /> : null}
                 <p className="section-text">
-                  Click the button below to get some historical facts about your State.
+                  Click the button below or say "facts" to get some historical facts about your State.
                 </p>
                 <button id="facts-btn" className="section-buton" onClick={handleClick_history}>
                   Proceed
