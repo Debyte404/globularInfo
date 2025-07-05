@@ -1,0 +1,1 @@
+export var backendAPI = "http://localhost:5000/api"

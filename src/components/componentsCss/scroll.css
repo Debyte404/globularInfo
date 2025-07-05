@@ -1,0 +1,61 @@
+/* Applies to Chrome, Edge, Safari */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: black;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #333;
+}
+
+/* Firefox-specific scrollbar styling */
+body {
+  scrollbar-width: thin;
+  scrollbar-color: black transparent;
+}
+
+/* Optional: target specific scroll containers */
+/* .scrollable-container {
+  overflow: auto;
+} */
+
+/* Optional: add custom scrollbar styling to containers */
+/* .scrollable-container::-webkit-scrollbar {
+  width: 6px;
+} */
+
+/* .scrollable-container::-webkit-scrollbar-thumb {
+  background-color: black;
+  border-radius: 4px;
+} */
+
+.scroll-down {
+    /* position: fixed; */
+    position: absolute;
+    top:2%;
+    right: 0%;
+    width: 150px;
+    height: 150px;
+    /* background-color: aqua; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.scroll-img {
+    width: 150px;
+    height: 150px;
+    opacity: 0.7;
+    /* animation: scrollAnimation 1s infinite; */
+}
