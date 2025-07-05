@@ -60,4 +60,3 @@ GlobularInfo is a MERN-stack web app designed to enrich your travel experience t
 ```env
 API_NINJAS_KEY=your_api_ninjas_key
 GOOGLE_GEMINI_KEY=your_gemini_api_key
-MONGO_URI=your_mongodb_connection_string
